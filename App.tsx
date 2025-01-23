@@ -59,15 +59,15 @@ const linking: LinkingOptions<RootStackParamList> = {
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <StatusBar style="auto" />
-      <PaperProvider theme={theme}>
+    <PaperProvider>
+      <SafeAreaProvider>
+        <StatusBar style="auto" />
         <AuthProvider>
           <NavigationContainer theme={navigationTheme} linking={linking}>
             <AppNavigator />
           </NavigationContainer>
         </AuthProvider>
-      </PaperProvider>
-    </SafeAreaProvider>
+      </SafeAreaProvider>
+    </PaperProvider>
   );
 } 
